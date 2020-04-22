@@ -1,10 +1,11 @@
 const express = require("express");
-const logger = require("logger")
-const mongoose = require("mongoose")
+var path = require("path");
+const logger = require("morgan");
+const mongoose = require("mongoose");
 
 const app = express();
 
-const db = require("./seeders");
+// const db = require("./seeders");
 
 app.use(logger("dev"));
 
@@ -16,10 +17,22 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //set up mongoose db
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/fitnessdb", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true });
+
+
+//html route 
+app.get("/stats", function(req, res) {
+    res.sendFile(path.join(__dirname, "/public/stats.html"));
+});
+
+app.get("/exercise", function(req, res) {
+    res.sendFile(path.join(__dirname, "/public/exercise.html"));
+});
 
 //db api's
-
+app.post("/exercise", function(req, res) {
+    res.sendFile(path.join(__dirname, "/public/exercise.html"));
+});
 
 //starts the exoress server with a printed link to the site
 app.listen(3000, () => {
