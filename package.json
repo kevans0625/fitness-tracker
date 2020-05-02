@@ -1,32 +1,35 @@
 {
-  "name": "fitness_tracker",
-  "version": "1.0.0",
-  "description": "tracks fitness progress",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "watch": "nodemon server.js",
-    "seed": "node seeders/seed.js"
-  },
-  "author": "Kristin Evans",
-  "license": "MIT",
-  "dependencies": {
-    "express": "^4.16.3",
-    "logger": "0.0.1",
-    "mongoose": "^5.3.16",
-    "morgan": "^1.9.1"
-  },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kevans0625/fitness-tracker.git"
-  },
-  "keywords": [
-    "fitness"
-  ],
-  "bugs": {
-    "url": "https://github.com/kevans0625/fitness-tracker/issues"
-  },
-  "homepage": "https://github.com/kevans0625/fitness-tracker#readme"
+    "name": "fitness_tracker",
+    "version": "1.0.0",
+    "description": "tracks fitness progress",
+    "main": "server.js",
+    "engines": {
+        "node": "12.11.1"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js",
+        "watch": "nodemon server.js",
+        "seed": "node seeders/seed.js"
+    },
+    "author": "Kristin Evans",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.16.3",
+        "logger": "0.0.1",
+        "mongoose": "^5.3.16",
+        "morgan": "^1.9.1"
+    },
+    "devDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kevans0625/fitness-tracker.git"
+    },
+    "keywords": [
+        "fitness"
+    ],
+    "bugs": {
+        "url": "https://github.com/kevans0625/fitness-tracker/issues"
+    },
+    "homepage": "https://github.com/kevans0625/fitness-tracker#readme"
 }
