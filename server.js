@@ -94,6 +94,6 @@ app.get("/api/workouts/range", function(req, res) {
 
 
 //starts the exoress server with a printed link to the site
-app.listen(3000, () => {
-    console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
+app.listen(PORT, () => {
+    console.log(`App running on port ${PORT}!`);
 });
